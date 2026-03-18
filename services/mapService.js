@@ -289,19 +289,6 @@ function mapService($http, mapFeatureService, metarTafNotamService, meteoService
             var y = coordinate[1];
             var x = (-coordinate[2] - 1);
 
-            //return "https://tile.mapzen.com/mapzen/terrain/v1/normal/" + z + "/" + y + "/" + x + ".png?api_key=mapzen-ECzH36f";
-            //return "https://api.mapbox.com/styles/v1/opacopac/cj0msmdwf00ad2snz48faknaq/tiles/256/" + z + "/" + y + "/" + x + "@2x?access_token=pk.eyJ1Ijoib3BhY29wYWMiLCJhIjoiY2owbXNsN3ltMDAwdjMyczZudmt0bGwwdiJ9.RG5N7U6VkoIQ44S-bB-aNg";
-
-            /*if (isBranch())
-            {
-                // TODO: temp for saving map views
-                var email = getCookie("email");
-
-                    if (!(email && isSelf(email)))
-                    return "https://api.mapbox.com/styles/v1/opacopac/cj0mxdtd800bx2slaha4b0p68/tiles/256/" + z + "/" + y + "/" + x + "@2x?access_token=pk.eyJ1Ijoib3BhY29wYWMiLCJhIjoiY2oxYjZ6aDQxMDA1ejJ3cGUzbmZ1Zm81eiJ9.oFvbw05OkuQesxOghWqv_A";
-            }
-            else
-                return "https://api.mapbox.com/styles/v1/opacopac/cj0mxdtd800bx2slaha4b0p68/tiles/256/" + z + "/" + y + "/" + x + "@2x?access_token=pk.eyJ1Ijoib3BhY29wYWMiLCJhIjoiY2oxYjdkOXpzMDA2dTMycGV3ZDlkM3R2NyJ9.paBLy_T8QJLELJd8VAAEIw";*/
 
             if (isLocalTile(z, y, x))
             {
@@ -2701,14 +2688,14 @@ function mapService($http, mapFeatureService, metarTafNotamService, meteoService
 			if (!isAlternate)
 				trackStyle = new ol.style.Style({
 					stroke : new ol.style.Stroke({
-						color: '#FF00FF',
+						color: '#0000FF',
 						width: 5
 					})
 				});
 			else
 				trackStyle = new ol.style.Style({
 					stroke : new ol.style.Stroke({
-						color: '#FF00FF',
+						color: '#0000FF',
 						width: 4,
 						lineDash: [10, 10]
 					})
@@ -2853,14 +2840,14 @@ function mapService($http, mapFeatureService, metarTafNotamService, meteoService
 				image: new ol.style.Circle({
 					radius: 6,
 					fill: new ol.style.Fill({
-						color: '#FF00FF',
+						color: '#0000FF',
 						rotateWithView: true
 					})
 				}),
 				text: new ol.style.Text({
 					font: 'bold 16px Calibri,sans-serif',
 					text: wp1.checkpoint,
-					fill: new ol.style.Fill( { color: '#660066' } ),
+					fill: new ol.style.Fill( { color: '#000066' } ),
 					stroke: new ol.style.Stroke( {color: '#FFFFFF', width: 10 } ),
 					textAlign: align,
 					offsetX: 15 * Math.sin(rotRad),
